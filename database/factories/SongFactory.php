@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\User;
+use App\Models\Song;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class UserFactory extends Factory
+class SongFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = User::class;
+    protected $model = Song::class;
 
     /**
      * Define the model's default state.
@@ -22,8 +22,7 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'email' => $this->faker->unique()->safeEmail,
-            'password' => bcrypt('password'),
+            'file' => $this->faker->filePath(),
         ];
     }
 }
