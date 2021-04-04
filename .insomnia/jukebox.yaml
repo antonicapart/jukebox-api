@@ -1,0 +1,148 @@
+_type: export
+__export_format: 4
+__export_date: 2021-04-04T09:07:12.116Z
+__export_source: insomnia.desktop.app:v2021.2.2
+resources:
+  - _id: req_1cf364e9acd74eb999bbd2f82c8402d4
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617527087275
+    created: 1617527016876
+    url: "{{ _.base_url }}/songs"
+    name: Index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617527016876
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_d4d246f63d444eac92248f1e99ab17bd
+    parentId: wrk_9d7a22c71a784241b9a0f4c418a21279
+    modified: 1617525541762
+    created: 1617525541762
+    name: Songs
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1617525541762
+    _type: request_group
+  - _id: wrk_9d7a22c71a784241b9a0f4c418a21279
+    parentId: null
+    modified: 1617381309235
+    created: 1617381309235
+    name: jukebox
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_809b9f8f10284cd0951f904e03c061f3
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617526846639
+    created: 1617526693667
+    url: "{{ _.base_url }}/songs/2"
+    name: Destroy
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617526693667
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d602223700f0496b96f35aed3577cef9
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617526447754
+    created: 1617525936929
+    url: "{{ _.base_url }}/songs/2"
+    name: Show
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617525936929
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_05801c89862c46faa9a940241d729f3d
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617527004480
+    created: 1617525548219
+    url: "{{ _.base_url }}/songs"
+    name: Store
+    description: ""
+    method: POST
+    body:
+      mimeType: multipart/form-data
+      params:
+        - name: file
+          value: ""
+          description: ""
+          id: pair_ada98028fb4d4db2af2d70afe395e837
+          type: file
+          multiline: null
+          fileName: E:\Music\02 Vae soli !.mp3
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: multipart/form-data
+        id: pair_55a0f572102d4cb1b793c4ef2de7f206
+    authentication: {}
+    metaSortKey: -1617525548219
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_2e84b0fd625e6969ecc55c31f63d677d000dea9c
+    parentId: wrk_9d7a22c71a784241b9a0f4c418a21279
+    modified: 1617525534958
+    created: 1617381309531
+    name: Base Environment
+    data:
+      base_url: 127.0.0.1:8000/api
+    dataPropertyOrder:
+      "&":
+        - base_url
+    color: null
+    isPrivate: false
+    metaSortKey: 1617381309531
+    _type: environment
+  - _id: jar_2e84b0fd625e6969ecc55c31f63d677d000dea9c
+    parentId: wrk_9d7a22c71a784241b9a0f4c418a21279
+    modified: 1617381309535
+    created: 1617381309535
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_6803c51987234a55b0803dfe9a960138
+    parentId: wrk_9d7a22c71a784241b9a0f4c418a21279
+    modified: 1617381309238
+    created: 1617381309238
+    fileName: jukebox
+    contents: ""
+    contentType: yaml
+    _type: api_spec

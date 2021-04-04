@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\SongRequest;
 use App\Models\Song;
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 
 class SongController extends Controller
 {
@@ -27,11 +27,8 @@ class SongController extends Controller
      */
     public function store(SongRequest $request)
     {
-        $file = $request->file('file')
-            ->store(encrypt(time()), 'songs');
-
         $song = Song::create([
-            'file' => $file,
+            'file' => Storage::disk('songs')->putFile('', $request->file('file')),
         ]);
 
         return response()->json($song, Response::HTTP_CREATED);
