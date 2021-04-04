@@ -71,7 +71,8 @@ class SongResourceTest extends TestCase
         $song = Song::factory()->create();
 
         $this->deleteJson(route('songs.destroy', $song))
-            ->assertStatus(Response::HTTP_NO_CONTENT);
+            ->assertStatus(Response::HTTP_NO_CONTENT)
+            ->assertNoContent();
     }
 
     public function test_deleting_a_song_that_does_not_exist_must_return_an_error()

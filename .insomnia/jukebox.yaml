@@ -1,52 +1,13 @@
 _type: export
 __export_format: 4
-__export_date: 2021-04-04T14:24:38.476Z
+__export_date: 2021-04-04T15:42:33.818Z
 __export_source: insomnia.desktop.app:v2021.2.2
 resources:
-  - _id: req_18d40e1a3da24a7c88b08504630cd895
-    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
-    modified: 1617532461229
-    created: 1617530162213
-    url: "{{ _.base_url }}/songs/3/file"
-    name: File
-    description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers: []
-    authentication: {}
-    metaSortKey: -1617530162213
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: fld_d4d246f63d444eac92248f1e99ab17bd
-    parentId: wrk_9d7a22c71a784241b9a0f4c418a21279
-    modified: 1617525541762
-    created: 1617525541762
-    name: Songs
-    description: ""
-    environment: {}
-    environmentPropertyOrder: null
-    metaSortKey: -1617525541762
-    _type: request_group
-  - _id: wrk_9d7a22c71a784241b9a0f4c418a21279
-    parentId: null
-    modified: 1617381309235
-    created: 1617381309235
-    name: jukebox
-    description: ""
-    scope: design
-    _type: workspace
   - _id: req_1cf364e9acd74eb999bbd2f82c8402d4
     parentId: fld_d4d246f63d444eac92248f1e99ab17bd
-    modified: 1617527087275
+    modified: 1617549527263
     created: 1617527016876
-    url: "{{ _.base_url }}/songs"
+    url: "{{ _.resource }}"
     name: Index
     description: ""
     method: GET
@@ -63,53 +24,42 @@ resources:
     settingRebuildPath: true
     settingFollowRedirects: global
     _type: request
-  - _id: req_809b9f8f10284cd0951f904e03c061f3
-    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
-    modified: 1617526846639
-    created: 1617526693667
-    url: "{{ _.base_url }}/songs/2"
-    name: Destroy
+  - _id: fld_d4d246f63d444eac92248f1e99ab17bd
+    parentId: fld_b768a1e172a845faa71913feb16404d6
+    modified: 1617549610968
+    created: 1617525541762
+    name: Songs
     description: ""
-    method: DELETE
-    body: {}
-    parameters: []
-    headers: []
-    authentication: {}
-    metaSortKey: -1617526693667
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
-  - _id: req_d602223700f0496b96f35aed3577cef9
-    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
-    modified: 1617526447754
-    created: 1617525936929
-    url: "{{ _.base_url }}/songs/2"
-    name: Show
+    environment:
+      resource: "{{ _.base_url }}/songs"
+    environmentPropertyOrder:
+      "&":
+        - resource
+    metaSortKey: -1617525541762
+    _type: request_group
+  - _id: fld_b768a1e172a845faa71913feb16404d6
+    parentId: wrk_9d7a22c71a784241b9a0f4c418a21279
+    modified: 1617549607517
+    created: 1617549607517
+    name: Resources
     description: ""
-    method: GET
-    body: {}
-    parameters: []
-    headers: []
-    authentication: {}
-    metaSortKey: -1617525936929
-    isPrivate: false
-    settingStoreCookies: true
-    settingSendCookies: true
-    settingDisableRenderRequestBody: false
-    settingEncodeUrl: true
-    settingRebuildPath: true
-    settingFollowRedirects: global
-    _type: request
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1617549607517
+    _type: request_group
+  - _id: wrk_9d7a22c71a784241b9a0f4c418a21279
+    parentId: null
+    modified: 1617381309235
+    created: 1617381309235
+    name: jukebox
+    description: ""
+    scope: design
+    _type: workspace
   - _id: req_05801c89862c46faa9a940241d729f3d
     parentId: fld_d4d246f63d444eac92248f1e99ab17bd
-    modified: 1617527004480
+    modified: 1617549538248
     created: 1617525548219
-    url: "{{ _.base_url }}/songs"
+    url: "{{ _.resource }}"
     name: Store
     description: ""
     method: POST
@@ -129,7 +79,70 @@ resources:
         value: multipart/form-data
         id: pair_55a0f572102d4cb1b793c4ef2de7f206
     authentication: {}
-    metaSortKey: -1617525548219
+    metaSortKey: -1617526855271.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_d602223700f0496b96f35aed3577cef9
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617549757041
+    created: 1617525936929
+    url: "{{ _.resource }}/5"
+    name: Show
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617525936929
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_809b9f8f10284cd0951f904e03c061f3
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617549577688
+    created: 1617526693667
+    url: "{{ _.resource }}/4"
+    name: Destroy
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617525936879
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_18d40e1a3da24a7c88b08504630cd895
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617549766732
+    created: 1617530162213
+    url: "{{ _.resource }}/5/file"
+    name: File
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617525936829
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
