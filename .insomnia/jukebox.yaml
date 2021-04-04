@@ -1,21 +1,21 @@
 _type: export
 __export_format: 4
-__export_date: 2021-04-04T09:07:12.116Z
+__export_date: 2021-04-04T14:24:38.476Z
 __export_source: insomnia.desktop.app:v2021.2.2
 resources:
-  - _id: req_1cf364e9acd74eb999bbd2f82c8402d4
+  - _id: req_18d40e1a3da24a7c88b08504630cd895
     parentId: fld_d4d246f63d444eac92248f1e99ab17bd
-    modified: 1617527087275
-    created: 1617527016876
-    url: "{{ _.base_url }}/songs"
-    name: Index
+    modified: 1617532461229
+    created: 1617530162213
+    url: "{{ _.base_url }}/songs/3/file"
+    name: File
     description: ""
     method: GET
     body: {}
     parameters: []
     headers: []
     authentication: {}
-    metaSortKey: -1617527016876
+    metaSortKey: -1617530162213
     isPrivate: false
     settingStoreCookies: true
     settingSendCookies: true
@@ -42,6 +42,27 @@ resources:
     description: ""
     scope: design
     _type: workspace
+  - _id: req_1cf364e9acd74eb999bbd2f82c8402d4
+    parentId: fld_d4d246f63d444eac92248f1e99ab17bd
+    modified: 1617527087275
+    created: 1617527016876
+    url: "{{ _.base_url }}/songs"
+    name: Index
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1617527016876
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
   - _id: req_809b9f8f10284cd0951f904e03c061f3
     parentId: fld_d4d246f63d444eac92248f1e99ab17bd
     modified: 1617526846639

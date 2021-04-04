@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SongController;
+use App\Http\Controllers\SongFileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('songs', SongController::class)->except('update');
+Route::get('songs/{song}/file', SongFileController::class)->name('songs.file');

@@ -38,7 +38,6 @@ class SongResourceTest extends TestCase
             ->assertStatus(Response::HTTP_CREATED)
             ->assertJson([
                 'id'   => $song->id,
-                'file' => $song->file,
             ]);
 
         Storage::disk('songs')->assertExists($song->file);
@@ -58,7 +57,6 @@ class SongResourceTest extends TestCase
             ->assertStatus(Response::HTTP_OK)
             ->assertJson([
                 'id' => $song->id,
-                'file' => $song->file,
             ]);
     }
 
@@ -80,5 +78,21 @@ class SongResourceTest extends TestCase
     {
         $this->deleteJson(route('songs.destroy', 1))
             ->assertStatus(Response::HTTP_NOT_FOUND);
+    }
+
+    public function test_a_song_can_spread_its_file()
+    {
+        Storage::fake('songs');
+
+        $this->postJson(route('songs.store'), [
+            'file' => UploadedFile::fake()->create('song.mp3', 1000, 'audio/mpeg')
+        ]);
+
+        $song = Song::first();
+
+        Storage::disk('songs')->assertExists($song->file);
+
+        $this->get(route('songs.file', $song))
+            ->assertStatus(Response::HTTP_OK);
     }
 }
