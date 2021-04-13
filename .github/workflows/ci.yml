@@ -33,7 +33,7 @@ jobs:
           php artisan key:generate
 
       - name: Run tests
-        run: php artisan test
+        run: ./vendor/bin/pest
         env:
           DB_PORT: ${{ job.services.mysql.ports['3306'] }}
           DB_USERNAME: root
